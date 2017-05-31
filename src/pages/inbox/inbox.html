@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>inbox</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-item 
+    [navPush]="correoPage"
+    [navParams]="correo" 
+    *ngFor="let correo of correos" >
+    <ion-avatar item-left >
+      <img src="../assets/abc/{{correo.title.substr(0,1)}}.ico">
+    </ion-avatar>
+    <h2> {{ correo.title }} </h2>
+  </button>
+</ion-content>
