@@ -11,76 +11,41 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class MailServiceProvider {
 
-  public  Mails = [
+  public  mails = [
     {
-      "albumId": 1,
-      "id": 1,
-      "title": "accusamus beatae ad facilis cum similique qui sunt",
-      "url": "http://placehold.it/600/92c952",
-      "thumbnailUrl": "http://placehold.it/150/92c952"
+      nombre: 'Carlos Ortega',
+      direccion: 'carlos@ibm.com',
+      asunto: 'Bienvenido!',
+      mensaje: "Bienvenido al curso de Ionic 2 en Español!! Praesent in leo ac erat pulvinar molestie a quis ligula. Curabitur ac sollicitudin erat, vel suscipit turpis. Sed accumsan nisi id felis pretium porttitor. Nulla suscipit gravida dolor vel condimentum.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent suscipit dolor turpis, sit amet mollis sapien suscipit a. Duis bibendum sodales ligula quis hendrerit. <br />Ut quis augue mi. Donec vulputate dictum metus convallis tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis venenatis tortor et volutpat. Morbi quis neque tellus. <br /><br />Praesent turpis sapien, tincidunt non est non, luctus ornare sem. Donec tincidunt lacus sit amet turpis porta volutpat.",
+      fecha: 'Lunes, Febrero 6 2017'
     },
     {
-      "albumId": 1,
-      "id": 2,
-      "title": "beprehenderit est deserunt velit ipsam",
-      "url": "http://placehold.it/600/771796",
-      "thumbnailUrl": "http://placehold.it/150/771796"
+      nombre: 'Felipe Flores',
+      direccion: 'fflores@google.com',
+      asunto: 'Hola!',
+      mensaje: 'Sed accumsan nisi id felis pretium porttitor. Nulla suscipit gravida dolor vel condimentum.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent suscipit dolor turpis, sit amet mollis sapien suscipit a. Duis bibendum sodales ligula quis hendrerit',
+      fecha: 'Lunes, Enero 16 2017'
     },
     {
-      "albumId": 1,
-      "id": 3,
-      "title": "cofficia porro iure quia iusto qui ipsa ut modi",
-      "url": "http://placehold.it/600/24f355",
-      "thumbnailUrl": "http://placehold.it/150/24f355"
+      nombre: 'Andres Alvarez',
+      direccion: 'andres.alvarez@twitter.com',
+      asunto: 'Fiesta!',
+      mensaje: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac dapibus odio, sit amet faucibus tellus. <br /> Donec at condimentum sapien. <br /><br />Aliquam consectetur mi non dolor porta faucibus. Aliquam a est non quam finibus dictum egestas in purus. Donec id diam neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas interdum lectus ac ex consectetur placerat. <br />Phasellus vitae malesuada est, eget iaculis ipsum. Fusce elit magna, varius nec sem eu, convallis rutrum mi. <br />Donec ligula metus, vulputate porttitor est maximus, tempus consectetur est. <br />Praesent rutrum est quis pellentesque placerat. ',
+      fecha: 'Lunes, Enero 15 2017'
     },
     {
-      "albumId": 1,
-      "id": 4,
-      "title": "dulpa odio esse rerum omnis laboriosam voluptate repudiandae",
-      "url": "http://placehold.it/600/d32776",
-      "thumbnailUrl": "http://placehold.it/150/d32776"
+      nombre: 'Dosé Jaramillo',
+      direccion: 'jjaramillo@apple.com',
+      asunto: 'Nuevo curso de programación',
+      mensaje: 'Revisa la página www.aprende-facilmente.com regularmente',
+      fecha: 'Lunes, Enero 8 2017'
     },
     {
-      "albumId": 1,
-      "id": 5,
-      "title": "eatus nisi omnis corporis facere molestiae rerum in",
-      "url": "http://placehold.it/600/f66b97",
-      "thumbnailUrl": "http://placehold.it/150/f66b97"
-    },
-    {
-      "albumId": 1,
-      "id": 6,
-      "title": "fccusamus ea aliquid et amet sequi nemo",
-      "url": "http://placehold.it/600/56a8c2",
-      "thumbnailUrl": "http://placehold.it/150/56a8c2"
-    },
-    {
-      "albumId": 1,
-      "id": 7,
-      "title": "gfficia delectus consequatur vero aut veniam explicabo molestias",
-      "url": "http://placehold.it/600/b0f7cc",
-      "thumbnailUrl": "http://placehold.it/150/b0f7cc"
-    },
-    {
-      "albumId": 1,
-      "id": 8,
-      "title": "hut porro officiis laborum odit ea laudantium corporis",
-      "url": "http://placehold.it/600/54176f",
-      "thumbnailUrl": "http://placehold.it/150/54176f"
-    },
-    {
-      "albumId": 1,
-      "id": 9,
-      "title": "aui eius qui autem sed",
-      "url": "http://placehold.it/600/51aa97",
-      "thumbnailUrl": "http://placehold.it/150/51aa97"
-    },
-    {
-      "albumId": 1,
-      "id": 10,
-      "title": "beatae et provident et ut vel",
-      "url": "http://placehold.it/600/810b14",
-      "thumbnailUrl": "http://placehold.it/150/810b14"
+      nombre: 'Coberto Rodriguez',
+      direccion: 'roberto@rodriguez.com',
+      asunto: 'Feliz Año!!!!',
+      mensaje: 'Espero que la hayas pasado bien en tus vacaciones y te deseamos un muy buen 2017!',
+      fecha: 'Lunes, Enero 2 2017'
     }
   ]
 

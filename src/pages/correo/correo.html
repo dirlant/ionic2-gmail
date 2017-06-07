@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>correo</ion-title>
   </ion-navbar>
 
@@ -14,12 +14,47 @@
 
 
 <ion-content padding>
-  <ion-card>
-    <img [src]="correo.url"/>
-    <ion-card-content>
-      <ion-card-title>
-        {{correo.title}}
-        </ion-card-title>
-    </ion-card-content>
-  </ion-card>
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="../assets/abc/{{correo.nombre.substr(0,1)}}.ico">
+    </ion-avatar>
+    <h2>{{correo.nombre}}</h2>
+    <p> {{correo.asunto}} </p>
+  </ion-item>
+
+  <ion-card-content>
+    <p [innerHTML]="correo.mensaje"> </p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button clear (click)="redactar('Reply')" >
+        <span>
+          <ion-icon name="ios-undo-outline"></ion-icon>
+          <br>
+          <label> Reply </label> 
+        </span>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button clear (click)="redactar('Reply All')">
+        <span>
+          <ion-icon name="ios-undo-outline"></ion-icon>
+          <ion-icon name="ios-undo-outline"></ion-icon>
+          <br>
+          <label> Reply All </label> 
+        </span>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button clear (click)="redactar('Forward')">
+        <span>
+          <ion-icon name="ios-redo-outline"></ion-icon>
+          <br>
+          <label> Forward </label> 
+        </span>
+      </button>
+    </ion-col>
+  </ion-row>
+
 </ion-content>

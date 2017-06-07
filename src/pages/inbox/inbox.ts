@@ -17,7 +17,7 @@ export class InboxPage {
     public navParams: NavParams,
     public _mailServiceProvider: MailServiceProvider
   ) {
-    this.correos = _mailServiceProvider.Mails;
+    this.correos = _mailServiceProvider.mails;
 
   }
 

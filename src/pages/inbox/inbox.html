@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>inbox</ion-title>
   </ion-navbar>
 
@@ -8,13 +8,15 @@
 
 
 <ion-content padding>
-  <button ion-item 
-    [navPush]="correoPage"
-    [navParams]="correo" 
-    *ngFor="let correo of correos" >
-    <ion-avatar item-left >
-      <img src="../assets/abc/{{correo.title.substr(0,1)}}.ico">
-    </ion-avatar>
-    <h2> {{ correo.title }} </h2>
-  </button>
+  <ion-list>
+    <button ion-item 
+      [navPush]="correoPage"
+      [navParams]="correo" 
+      *ngFor="let correo of correos" >
+      <ion-avatar item-left >
+        <img src="../assets/abc/{{correo.nombre.substr(0,1)}}.ico">
+      </ion-avatar>
+      <h2> {{ correo.asunto }} </h2>
+    </button>
+  </ion-list>
 </ion-content>
