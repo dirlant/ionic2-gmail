@@ -1,7 +1,8 @@
+import { RedactarPage } from './../redactar/redactar';
 import { CorreoPage } from './../correo/correo';
 import { MailServiceProvider } from './../../providers/mail-service/mail-service';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams , ModalController } from 'ionic-angular';
 
 @Component({
   selector: 'page-inbox',
@@ -15,7 +16,8 @@ export class InboxPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public _mailServiceProvider: MailServiceProvider
+    public _mailServiceProvider: MailServiceProvider,
+    public modalController: ModalController
   ) {
     this.correos = _mailServiceProvider.mails;
 
@@ -23,6 +25,11 @@ export class InboxPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad InboxPage');
+  }
+
+  nuevoCorreo(){
+    let modal = this.modalController.create(RedactarPage, {opcion:'Nuevo Correo', correo: ''});
+    modal.present();
   }
 
 }

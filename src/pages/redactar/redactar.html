@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-buttons left>
+      <button ion-button icon-only (click)="cerrarModal()">
+        <ion-icon name="md-arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{opcion}}</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="enviarCorreo()">
+        <ion-icon name="md-send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>De</ion-label>
+    <ion-input type="text" [(ngModel)]="de" *ngIf="de != ''" disabled></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Para</ion-label>
+    <ion-input type="text" [(ngModel)]="para" ></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label floating>Asunto</ion-label>
+    <ion-input type="text" [(ngModel)]="asunto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <textarea cols="34" rows="10">{{mensaje}}</textarea>
+  </ion-item>
+</ion-content>
