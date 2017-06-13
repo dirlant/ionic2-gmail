@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { CorreoPage } from './../pages/correo/correo';
 import { InboxPage } from './../pages/inbox/inbox';
 import { RedactarPage } from './../pages/redactar/redactar';
+import { EnviadosPage } from './../pages/enviados/enviados';
 
 import { MailServiceProvider } from '../providers/mail-service/mail-service';
 import { ToastProvider } from '../providers/toast/toast';
@@ -20,7 +21,8 @@ import { ToastProvider } from '../providers/toast/toast';
     HomePage,
     InboxPage,
     CorreoPage,
-    RedactarPage
+    RedactarPage,
+    EnviadosPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { ToastProvider } from '../providers/toast/toast';
     HomePage,
     InboxPage,
     CorreoPage,
-    RedactarPage
+    RedactarPage,
+    EnviadosPage
   ],
   providers: [
     StatusBar,

@@ -1,3 +1,4 @@
+import { EnviadosPage } from './../pages/enviados/enviados';
 import { RedactarPage } from './../pages/redactar/redactar';
 import { InboxPage } from './../pages/inbox/inbox';
 import { Component, ViewChild } from '@angular/core';
@@ -12,7 +13,8 @@ export class MyApp {
   rootPage:any = InboxPage;
   @ViewChild('content') menu: NavController;
   inboxPage = InboxPage;
-  redactarPage = RedactarPage
+  redactarPage = RedactarPage;
+  enviadosPage = EnviadosPage;
 
   constructor(
     platform: Platform, 
